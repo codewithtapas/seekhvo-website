@@ -51,6 +51,17 @@ export const metadata: Metadata = {
     description:
       "Explore Artificial Intelligence. Build Real Skills. Shape the Future.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   verification: gscCode ? { google: gscCode } : undefined,
 };
 
