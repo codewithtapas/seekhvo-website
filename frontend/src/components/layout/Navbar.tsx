@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronRight, LayoutDashboard, LogOut } from "lucide-react";
+import { Menu, X, ChevronRight, LayoutDashboard, LogOut, MessageCircle } from "lucide-react";
 import { SeekhvoLogo } from "@/components/ui/SeekhvoLogo";
 import { useAuth } from "@/lib/auth";
 
@@ -144,6 +144,15 @@ export function Navbar() {
                 >
                   Book Free Demo
                 </Link>
+                <a
+                  href="https://wa.me/918280765204?text=Hello%20Seekhvo%20Team%2C%20I%20am%20interested%20in%20your%20AI%20courses.%20Please%20share%20the%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2.5 text-center text-sm font-semibold text-emerald-300 hover:bg-emerald-500/20"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  WhatsApp (+91 8280765204)
+                </a>
               </>
             )}
           </div>

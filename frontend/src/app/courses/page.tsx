@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import { Search } from "lucide-react";
+import { Search, MessageCircle } from "lucide-react";
 import { apiFetch, type PaginatedResponse } from "@/lib/api";
 import type { CourseItem } from "@/lib/types";
 import { CourseCard3D } from "@/components/ui/CourseCard3D";
@@ -93,6 +93,24 @@ export default function CoursesPage() {
             ))}
           </div>
         )}
+
+        <div className="mt-16 text-center">
+          <div className="glass-panel mx-auto max-w-2xl rounded-2xl p-6 sm:p-8">
+            <h3 className="font-heading text-lg font-bold text-white">Need Customized Corporate or Group AI Training?</h3>
+            <p className="mt-2 text-xs sm:text-sm text-[#A8B8D8]">
+              We design bespoke generative & agentic AI curricula for engineering teams and enterprise cohorts.
+            </p>
+            <a
+              href="https://wa.me/918280765204?text=Hello%20Seekhvo%20Team%2C%20I%20am%20interested%20in%20custom%20team%20AI%20training%20details."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-500/15 px-6 py-2.5 text-xs sm:text-sm font-semibold text-emerald-300 hover:bg-emerald-500/25 transition"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Chat on WhatsApp (+91 8280765204)
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

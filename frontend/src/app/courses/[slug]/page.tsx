@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Tag,
   ArrowLeft,
+  MessageCircle,
 } from "lucide-react";
 import { apiFetch, formatPrice, ApiError } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
@@ -262,6 +263,18 @@ export default function CourseDetailPage() {
               >
                 Book Free Demo First
               </Link>
+
+              <a
+                href={`https://wa.me/918280765204?text=${encodeURIComponent(
+                  `Hello Seekhvo Team, I am interested in the ${course.title} course. Please share the details.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full rounded-full border border-emerald-400/40 bg-emerald-500/10 py-3 text-center text-sm font-semibold text-emerald-300 hover:bg-emerald-500/20 transition"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Enquire on WhatsApp (+91 8280765204)
+              </a>
 
               <div className="border-t border-white/10 pt-4 space-y-2.5">
                 {course.included_features.map((feat) => (

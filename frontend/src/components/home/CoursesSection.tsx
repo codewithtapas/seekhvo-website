@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import type { CourseItem } from "@/lib/types";
 import { CourseCard3D } from "@/components/ui/CourseCard3D";
 
@@ -35,6 +35,21 @@ export function CoursesSection({ courses }: { courses: CourseItem[] }) {
           {courses.map((course) => (
             <CourseCard3D key={course.id} course={course} />
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-sm text-[#A8B8D8]">
+            Need help choosing the right AI track?{" "}
+            <a
+              href="https://wa.me/918280765204?text=Hello%20Seekhvo%20Team%2C%20I%20am%20interested%20in%20your%20AI%20courses.%20Please%20share%20the%20details."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold text-emerald-300 hover:text-emerald-200 underline underline-offset-4"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Chat with Academic Advisor on WhatsApp (+91 8280765204)
+            </a>
+          </p>
         </div>
       </div>
     </section>

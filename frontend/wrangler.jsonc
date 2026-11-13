@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "seekhvo-frontend",
+  "compatibility_date": "2026-11-13",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "routes": [
+    {
+      "pattern": "seekhvo.space/*",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.seekhvo.space/*",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": ".cloudflare/output/v0/workers/default/assets",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": [
+      "/*",
+      "!/_next/static/*",
+      "!/*/_next/static/*"
+    ]
+  },
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://seekhvo.space",
+    "NEXT_PUBLIC_API_URL": "https://api.seekhvo.space/api/v1",
+    "NEXT_PUBLIC_WHATSAPP_NUMBER": "918280765204"
+  }
+}
+

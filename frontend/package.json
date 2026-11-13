@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "dev:vinext": "vite dev --port 3001",
+    "build:vinext": "vite build",
+    "start:vinext": "vite preview",
+    "deploy:vinext": "vinext-cloudflare deploy"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.0",
@@ -17,10 +21,13 @@
     "gsap": "^3.12.7",
     "lucide-react": "^0.475.0",
     "next": "^15.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "latest",
+    "react-dom": "latest",
     "tailwind-merge": "^3.0.2",
-    "three": "^0.174.0"
+    "three": "^0.174.0",
+    "vinext": "latest",
+    "react-server-dom-webpack": "latest",
+    "@vinext/cloudflare": "latest"
   },
   "devDependencies": {
     "@types/node": "^22.13.5",
@@ -30,7 +37,12 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3"
-  }
+    "typescript": "^5.7.3",
+    "vite": "8.3.0",
+    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-rsc": "latest",
+    "@cloudflare/vite-plugin": "beta",
+    "cf": "latest"
+  },
+  "type": "module"
 }
-

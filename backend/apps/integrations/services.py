@@ -116,7 +116,7 @@ class WhatsAppService:
 
     @staticmethod
     def build_chat_link(message: str) -> str:
-        phone = getattr(settings, "WHATSAPP_PUBLIC_NUMBER", "919000000000").lstrip("+")
+        phone = getattr(settings, "WHATSAPP_PUBLIC_NUMBER", "918280765204").lstrip("+")
         return f"https://wa.me/{phone}?text={quote(message)}"
 
     @staticmethod

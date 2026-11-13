@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { Check, ArrowRight, Sparkles, MessageCircle } from "lucide-react";
 import type { CourseItem } from "@/lib/types";
 import { formatPrice } from "@/lib/api";
 
@@ -132,6 +132,15 @@ export function PricingAndCtaSection({ courses }: { courses: CourseItem[] }) {
               >
                 BOOK FREE DEMO
               </Link>
+              <a
+                href="https://wa.me/918280765204?text=Hello%20Seekhvo%20Team%2C%20I%20am%20interested%20in%20your%20AI%20courses.%20Please%20share%20the%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-500/15 px-6 py-3.5 text-sm font-semibold text-emerald-300 hover:bg-emerald-500/25 transition"
+              >
+                <MessageCircle className="h-4 w-4" />
+                CHAT ON WHATSAPP
+              </a>
             </div>
           </div>
         </div>

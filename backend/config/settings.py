@@ -276,7 +276,7 @@ SANDBOX_WEBHOOK_SECRET = os.getenv("SANDBOX_WEBHOOK_SECRET", "seekhvo-sandbox-we
 WHATSAPP_API_ENABLED = os.getenv("WHATSAPP_API_ENABLED", "False").lower() in ("1", "true", "yes")
 WHATSAPP_PHONE_NUMBER_ID = os.getenv("WHATSAPP_PHONE_NUMBER_ID", "")
 WHATSAPP_ACCESS_TOKEN = os.getenv("WHATSAPP_ACCESS_TOKEN", "")
-WHATSAPP_PUBLIC_NUMBER = os.getenv("WHATSAPP_PUBLIC_NUMBER", "919000000000")
+WHATSAPP_PUBLIC_NUMBER = os.getenv("WHATSAPP_PUBLIC_NUMBER", "918280765204")
 
 # File Upload Limits (10MB default for assignments/assets; videos use S3 presigned upload or external URLs)
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024

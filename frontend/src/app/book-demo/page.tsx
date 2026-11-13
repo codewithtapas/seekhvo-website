@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { CalendarClock, CheckCircle2, Sparkles } from "lucide-react";
+import { CalendarClock, CheckCircle2, Sparkles, MessageCircle } from "lucide-react";
 import { apiFetch, ApiError, type PaginatedResponse } from "@/lib/api";
 import type { CourseItem } from "@/lib/types";
 
@@ -77,6 +77,17 @@ export default function BookDemoPage() {
               <p className="text-sm text-[#A8B8D8] max-w-md mx-auto">
                 We have registered your free demo request and sent a confirmation notification. Our team will share your Google Meet / Zoom invite shortly.
               </p>
+              <div className="pt-4">
+                <a
+                  href="https://wa.me/918280765204?text=Hello%20Seekhvo%20Team%2C%20I%20have%20submitted%20a%20demo%20booking%20and%20would%20like%20to%20confirm%20my%20slot."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-500/15 px-6 py-3 text-sm font-semibold text-emerald-300 hover:bg-emerald-500/25 transition"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  Connect with Academic Advisor on WhatsApp (+91 8280765204)
+                </a>
+              </div>
             </div>
           ) : (
             <form onSubmit={(e) => void handleSubmit(e)} className="space-y-5">
@@ -185,6 +196,21 @@ export default function BookDemoPage() {
                 <CalendarClock className="h-4 w-4" />
                 {submitting ? "Booking Slot..." : "Confirm Free Demo Booking"}
               </button>
+
+              <div className="pt-2 text-center">
+                <p className="text-xs text-[#A8B8D8]">
+                  Prefer instant WhatsApp booking?{" "}
+                  <a
+                    href="https://wa.me/918280765204?text=Hello%20Seekhvo%20Team%2C%20I%20am%20interested%20in%20your%20AI%20courses.%20Please%20share%20the%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-emerald-300 hover:text-emerald-200 underline underline-offset-4 inline-flex items-center gap-1"
+                  >
+                    <MessageCircle className="h-3.5 w-3.5" />
+                    Chat on WhatsApp (+91 8280765204)
+                  </a>
+                </p>
+              </div>
             </form>
           )}
         </div>

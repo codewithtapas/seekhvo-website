@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MessageCircle, Send, CheckCircle2 } from "lucide-react";
+import { Mail, MessageCircle, Send, CheckCircle2, Phone } from "lucide-react";
 import { apiFetch, ApiError } from "@/lib/api";
 
 export default function ContactPage() {
@@ -34,7 +34,10 @@ export default function ContactPage() {
     }
   };
 
-  const whatsapp = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919000000000").replace(/\D/g, "");
+  const whatsapp = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "918280765204").replace(/\D/g, "");
+  const whatsappHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(
+    "Hello Seekhvo Team, I am interested in your AI courses. Please share the details."
+  )}`;
 
   return (
     <div className="pt-32 pb-24 bg-[#030B20] cyber-grid-bg min-h-screen">
@@ -52,18 +55,32 @@ export default function ContactPage() {
             </p>
 
             <div className="glass-panel rounded-2xl p-5 space-y-4">
-              <div className="flex items-center gap-3 text-sm text-white">
-                <Mail className="h-5 w-5 text-[#00D4FF]" />
-                <span>hello@seekhvo.space</span>
-              </div>
               <a
-                href={`https://wa.me/${whatsapp}?text=${encodeURIComponent("Hello Seekhvo! I have an enquiry.")}`}
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm text-emerald-300 hover:text-emerald-200"
+                className="flex items-center gap-3 text-sm font-semibold text-emerald-300 hover:text-emerald-200 transition"
               >
-                <MessageCircle className="h-5 w-5" />
-                <span>Chat on WhatsApp Business</span>
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
+                  <MessageCircle className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-xs text-[#A8B8D8]">Official WhatsApp Support</div>
+                  <div>+91 8280765204</div>
+                </div>
+              </a>
+
+              <a
+                href="mailto:hello@seekhvo.space"
+                className="flex items-center gap-3 text-sm text-[#42A5FF] hover:text-white transition"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-500/20 text-[#00D4FF]">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-xs text-[#A8B8D8]">Official Email</div>
+                  <div>hello@seekhvo.space</div>
+                </div>
               </a>
             </div>
           </div>
@@ -75,7 +92,7 @@ export default function ContactPage() {
                   <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-400" />
                   <h2 className="font-heading text-2xl font-bold text-white">Enquiry Received</h2>
                   <p className="text-sm text-[#A8B8D8]">
-                    Our team will respond to your email shortly.
+                    Our team will respond to your query shortly.
                   </p>
                   <button
                     type="button"
@@ -150,4 +167,3 @@ export default function ContactPage() {
     </div>
   );
 }
-
