@@ -23,7 +23,12 @@
     "run_worker_first": [
       "/*",
       "!/_next/static/*",
-      "!/*/_next/static/*"
+      "!/*/_next/static/*",
+      "!/favicon.ico",
+      "!/favicon.png",
+      "!/icon.png",
+      "!/apple-icon.png",
+      "!/images/*"
     ]
   },
   "vars": {
