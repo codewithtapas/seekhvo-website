@@ -5,6 +5,21 @@ import { Cpu, ShieldCheck, Layers, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us",
   description: "Learn about Seekhvo AI Learning (seekhvo.space) — practical Artificial Intelligence education built around engineering rigor.",
+  alternates: {
+    canonical: "https://seekhvo.space/about",
+  },
+  openGraph: {
+    title: "About Us | Seekhvo AI Learning",
+    description: "Learn about Seekhvo AI Learning (seekhvo.space) — practical Artificial Intelligence education built around engineering rigor.",
+    url: "https://seekhvo.space/about",
+    images: [{ url: "https://seekhvo.space/images/seekhvo-logo.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Seekhvo AI Learning",
+    description: "Learn about Seekhvo AI Learning (seekhvo.space) — practical Artificial Intelligence education built around engineering rigor.",
+    images: ["https://seekhvo.space/images/seekhvo-logo.png"],
+  },
 };
 
 export default function AboutPage() {
@@ -70,4 +85,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

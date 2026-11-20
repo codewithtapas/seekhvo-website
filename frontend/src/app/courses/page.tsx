@@ -4,19 +4,25 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Search, MessageCircle } from "lucide-react";
 import { apiFetch, type PaginatedResponse } from "@/lib/api";
 import type { CourseItem } from "@/lib/types";
+import { STATIC_COURSES } from "@/lib/coursesData";
 import { CourseCard3D } from "@/components/ui/CourseCard3D";
 
 export default function CoursesPage() {
-  const [courses, setCourses] = useState<CourseItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [courses, setCourses] = useState<CourseItem[]>(STATIC_COURSES);
+  const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
   const [level, setLevel] = useState("ALL");
 
   useEffect(() => {
     apiFetch<PaginatedResponse<CourseItem>>("/courses/")
-      .then((res) => setCourses(res.results || []))
-      .catch(() => setCourses([]))
-      .finally(() => setLoading(false));
+      .then((res) => {
+        if (res.results && res.results.length > 0) {
+          setCourses(res.results);
+        }
+      })
+      .catch(() => {
+        // Retain STATIC_COURSES if backend is unreachable
+      });
   }, []);
 
   const filtered = useMemo(() => {

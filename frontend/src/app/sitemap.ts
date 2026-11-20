@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getApiBase, type PaginatedResponse } from "@/lib/api";
 import type { CourseItem } from "@/lib/types";
+import { STATIC_COURSES } from "@/lib/coursesData";
 
 // Fallback published courses verified from the project database
 const FALLBACK_COURSE_SLUGS = [
@@ -67,12 +68,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/verify`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
       url: `${baseUrl}/privacy-policy`,
       lastModified: now,
       changeFrequency: "yearly",
@@ -93,7 +88,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // Dynamically load active courses from backend if available, fallback to verified project data
-  let courseSlugs = FALLBACK_COURSE_SLUGS;
+  let courseSlugs = STATIC_COURSES.map((c) => c.slug);
   try {
     const res = await fetch(`${getApiBase()}/courses/`, {
       next: { revalidate: 3600 },

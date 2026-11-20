@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy Policy" };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy Policy for Seekhvo AI Learning (seekhvo.space). Read how we protect and manage user data.",
+  alternates: {
+    canonical: "https://seekhvo.space/privacy-policy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (
@@ -24,4 +34,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-

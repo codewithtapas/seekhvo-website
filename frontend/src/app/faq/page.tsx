@@ -4,8 +4,17 @@ import { apiFetch, type PaginatedResponse } from "@/lib/api";
 import type { FAQItem } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "FAQ",
-  description: "Frequently asked questions about Seekhvo AI Learning programs, live classes, and certificates.",
+  title: "Frequently Asked Questions",
+  description: "Common questions regarding Seekhvo AI Learning programs, prerequisites, fees, live sessions, and certification.",
+  alternates: {
+    canonical: "https://seekhvo.space/faq",
+  },
+  openGraph: {
+    title: "Frequently Asked Questions | Seekhvo AI Learning",
+    description: "Common questions regarding Seekhvo AI Learning programs, prerequisites, fees, live sessions, and certification.",
+    url: "https://seekhvo.space/faq",
+    images: [{ url: "https://seekhvo.space/images/seekhvo-logo.png" }],
+  },
 };
 
 export const dynamic = "force-dynamic";

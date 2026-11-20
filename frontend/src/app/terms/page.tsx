@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Terms & Conditions" };
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description: "Terms and conditions for enrollment and educational services on Seekhvo AI Learning (seekhvo.space).",
+  alternates: {
+    canonical: "https://seekhvo.space/terms",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TermsPage() {
   return (
@@ -19,4 +29,3 @@ export default function TermsPage() {
     </div>
   );
 }
-

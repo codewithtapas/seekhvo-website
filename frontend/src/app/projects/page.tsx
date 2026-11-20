@@ -5,8 +5,17 @@ import { apiFetch, type PaginatedResponse } from "@/lib/api";
 import type { ProjectShowcaseItem } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Projects Showcase",
-  description: "Applied Generative AI, Machine Learning, and Agentic AI capstone projects at Seekhvo.",
+  title: "AI Capstone Projects Showcase",
+  description: "Explore production-grade Generative AI, Machine Learning, and Agentic AI capstone projects built by Seekhvo engineers.",
+  alternates: {
+    canonical: "https://seekhvo.space/projects",
+  },
+  openGraph: {
+    title: "AI Capstone Projects Showcase | Seekhvo AI Learning",
+    description: "Explore production-grade Generative AI, Machine Learning, and Agentic AI capstone projects built by Seekhvo engineers.",
+    url: "https://seekhvo.space/projects",
+    images: [{ url: "https://seekhvo.space/images/seekhvo-logo.png" }],
+  },
 };
 
 export const dynamic = "force-dynamic";

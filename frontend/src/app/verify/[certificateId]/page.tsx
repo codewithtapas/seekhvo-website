@@ -1,8 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck, ShieldAlert, ArrowLeft } from "lucide-react";
 import { apiFetch } from "@/lib/api";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ certificateId: string }>;
+}): Promise<Metadata> {
+  const { certificateId } = await params;
+  return {
+    title: `Verify Certificate ${certificateId} | Seekhvo AI Learning`,
+    description: "Seekhvo authentic credential and certificate verification record.",
+    alternates: {
+      canonical: `https://seekhvo.space/verify/${encodeURIComponent(certificateId)}`,
+    },
+    robots: {
+      index: false,
+      follow: false,
+    },
+  };
+}
 
 interface VerifyResponse {
   valid: boolean;

@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Refund Policy" };
+export const metadata: Metadata = {
+  title: "Refund Policy",
+  description: "Refund Policy for course enrollments and cohort registrations on Seekhvo AI Learning (seekhvo.space).",
+  alternates: {
+    canonical: "https://seekhvo.space/refund-policy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RefundPolicyPage() {
   return (
@@ -15,4 +25,3 @@ export default function RefundPolicyPage() {
     </div>
   );
 }
-

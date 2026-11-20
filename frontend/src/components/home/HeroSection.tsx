@@ -70,12 +70,12 @@ export function HeroSection() {
           NEXT-GEN AI EDUCATION • SEEKHVO.SPACE
         </div>
 
-        <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] leading-[1.08]">
-          LEARN BEYOND <span className="neon-text-gradient">LIMITS.</span>
+        <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.2rem] leading-[1.08]">
+          Seekhvo AI Learning — <span className="neon-text-gradient">Learn Beyond Limits</span>
         </h1>
 
         <p className="mt-3 font-heading text-base font-medium text-[#42A5FF] sm:text-lg">
-          Explore Artificial Intelligence. Build Real Skills. Shape the Future.
+          AI Learning Platform for Artificial Intelligence, Generative AI & Machine Learning Engineering
         </p>
 
         <p className="mx-auto mt-3 max-w-md text-xs leading-relaxed text-[#A8B8D8] sm:text-sm">

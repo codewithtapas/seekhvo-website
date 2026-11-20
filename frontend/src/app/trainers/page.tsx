@@ -5,8 +5,17 @@ import { apiFetch, type PaginatedResponse } from "@/lib/api";
 import type { TrainerProfileItem } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Trainers",
-  description: "Verified AI instructors and mentors at Seekhvo AI Learning.",
+  title: "AI Faculty & Industry Mentors",
+  description: "Meet verified Artificial Intelligence practitioners and instructors leading cohorts at Seekhvo AI Learning.",
+  alternates: {
+    canonical: "https://seekhvo.space/trainers",
+  },
+  openGraph: {
+    title: "AI Faculty & Industry Mentors | Seekhvo AI Learning",
+    description: "Meet verified Artificial Intelligence practitioners and instructors leading cohorts at Seekhvo AI Learning.",
+    url: "https://seekhvo.space/trainers",
+    images: [{ url: "https://seekhvo.space/images/seekhvo-logo.png" }],
+  },
 };
 
 export const dynamic = "force-dynamic";
