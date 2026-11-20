@@ -108,9 +108,31 @@ const orgSchema = {
   name: "Seekhvo AI Learning",
   alternateName: ["Seekhvo", "Seekhvo AI", "Seekhvo.space"],
   url: "https://seekhvo.space",
-  logo: "https://seekhvo.space/images/seekhvo-logo.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://seekhvo.space/images/seekhvo-logo.png",
+    width: 702,
+    height: 186,
+    caption: "Seekhvo AI Learning",
+  },
+  image: "https://seekhvo.space/images/seekhvo-logo.png",
   description:
-    "Seekhvo AI Learning is an advanced Artificial Intelligence education and engineering training platform offering industry-aligned courses in Generative AI, Machine Learning, Python, and Agentic AI.",
+    "Seekhvo AI Learning (seekhvo.space) is an AI education and engineering training platform offering practical learning in Artificial Intelligence, Generative AI, Machine Learning, Python Programming, Data Science and Agentic AI.",
+  disambiguatingDescription:
+    "Seekhvo AI Learning (seekhvo.space) is an independent AI education and engineering training platform offering practical learning in Artificial Intelligence, Generative AI, Machine Learning, Python Programming, Data Science and Agentic AI.",
+  brand: {
+    "@type": "Brand",
+    name: "Seekhvo",
+    alternateName: "Seekhvo AI Learning",
+  },
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Generative AI",
+    "Machine Learning",
+    "Agentic AI",
+    "Python Programming",
+    "Data Science",
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+91-8280765204",
@@ -126,7 +148,7 @@ const websiteSchema = {
   "@id": "https://seekhvo.space/#website",
   url: "https://seekhvo.space",
   name: "Seekhvo AI Learning",
-  alternateName: ["Seekhvo", "Seekhvo AI"],
+  alternateName: ["Seekhvo", "Seekhvo AI", "Seekhvo.space"],
   publisher: {
     "@id": "https://seekhvo.space/#organization",
   },

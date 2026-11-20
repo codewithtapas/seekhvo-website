@@ -28,7 +28,11 @@ export function SeekhvoLogo({ height = 46, href = "/", className = "" }: Seekhvo
 
   if (!href) return img;
   return (
-    <Link href={href} className="inline-flex items-center shrink-0 focus:outline-none">
+    <Link
+      href={href}
+      className="inline-flex items-center shrink-0 focus:outline-none"
+      aria-label="Seekhvo AI Learning Homepage"
+    >
       {img}
     </Link>
   );
