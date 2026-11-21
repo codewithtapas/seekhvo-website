@@ -27,9 +27,10 @@ export function Footer() {
             <h4 className="font-heading text-sm font-semibold uppercase tracking-wider text-white">Programs</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-[#A8B8D8]">
               <li><Link href="/courses" className="hover:text-[#00D4FF] transition">All AI Programs</Link></li>
+              <li><Link href="/ai-courses-odisha" className="hover:text-[#00D4FF] transition">AI Courses in Odisha</Link></li>
+              <li><Link href="/ai-training-bhubaneswar" className="hover:text-[#00D4FF] transition">AI Training in Bhubaneswar</Link></li>
               <li><Link href="/courses/ai-engineer-program" className="hover:text-[#00D4FF] transition">AI Engineer Program</Link></li>
               <li><Link href="/courses/generative-ai" className="hover:text-[#00D4FF] transition">Generative AI</Link></li>
-              <li><Link href="/courses/agentic-ai" className="hover:text-[#00D4FF] transition">Agentic AI</Link></li>
               <li><Link href="/projects" className="hover:text-[#00D4FF] transition">AI Projects</Link></li>
             </ul>
           </div>
@@ -38,6 +39,7 @@ export function Footer() {
             <h4 className="font-heading text-sm font-semibold uppercase tracking-wider text-white">Platform</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-[#A8B8D8]">
               <li><Link href="/about" className="hover:text-[#00D4FF] transition">About Seekhvo</Link></li>
+              <li><Link href="/blog" className="hover:text-[#00D4FF] transition">Engineering Blog</Link></li>
               <li><Link href="/trainers" className="hover:text-[#00D4FF] transition">Trainers</Link></li>
               <li><Link href="/book-demo" className="hover:text-[#00D4FF] transition">Book Free Demo</Link></li>
               <li><Link href="/verify" className="hover:text-[#00D4FF] transition inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-[#00D4FF]" />Verify Certificate</Link></li>

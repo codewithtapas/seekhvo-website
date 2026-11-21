@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getApiBase, type PaginatedResponse } from "@/lib/api";
 import type { CourseItem } from "@/lib/types";
 import { STATIC_COURSES } from "@/lib/coursesData";
+import { BLOG_POSTS } from "@/lib/blogData";
 
 // Fallback published courses verified from the project database
 const FALLBACK_COURSE_SLUGS = [
@@ -41,6 +42,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/book-demo`,
       lastModified: now,
       changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-courses-odisha`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ai-training-bhubaneswar`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: "daily",
       priority: 0.8,
     },
     {
@@ -111,5 +130,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...courseRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt),
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...courseRoutes, ...blogRoutes];
 }
