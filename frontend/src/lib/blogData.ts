@@ -47,8 +47,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "How to Become an AI Engineer in India: The 2026 Practical Roadmap",
     seoTitle: "How to Become an AI Engineer in India — 2026 Roadmap | Seekhvo",
     description: "A complete, engineering-first roadmap to becoming an AI Engineer in India. Master Python, deep learning architectures, vector databases, RAG, and production LLM deployment.",
-    publishedAt: "2026-02-15T10:00:00Z",
-    updatedAt: "2026-02-15T10:00:00Z",
+    publishedAt: "2026-11-21T06:00:00Z",
+    updatedAt: "2026-11-21T06:30:00Z",
     author: {
       name: "Tapas Mohanty",
       role: "Founder & Lead Technical Instructor",
@@ -149,8 +149,8 @@ async def predict_endpoint(req: InferenceRequest):
     title: "What Is Generative AI? A Practical Engineering Guide for Students",
     seoTitle: "What Is Generative AI? Practical Guide for Students | Seekhvo",
     description: "An accessible yet technically rigorous guide to Generative AI for students. Understand transformers, tokenization, embeddings, fine-tuning, and practical applications.",
-    publishedAt: "2026-02-18T10:00:00Z",
-    updatedAt: "2026-02-18T10:00:00Z",
+    publishedAt: "2026-11-21T06:10:00Z",
+    updatedAt: "2026-11-21T06:30:00Z",
     author: {
       name: "Tapas Mohanty",
       role: "Founder & Lead Technical Instructor",
@@ -239,8 +239,8 @@ print(f"Similarity (Neural Network vs Cooking Recipe): {sim_diff:.4f}") # Low (~
     title: "How Engineering Students in Odisha Can Launch a High-Impact AI Career",
     seoTitle: "AI Career Guide for Engineering Students in Odisha | Seekhvo",
     description: "Practical career advice for computer science and engineering students across Odisha. Learn how to bridge college curriculum gaps, build verified AI portfolios, and prepare for modern tech roles.",
-    publishedAt: "2026-02-20T10:00:00Z",
-    updatedAt: "2026-02-20T10:00:00Z",
+    publishedAt: "2026-11-21T06:20:00Z",
+    updatedAt: "2026-11-21T06:30:00Z",
     author: {
       name: "Tapas Mohanty",
       role: "Founder & Lead Technical Instructor",
